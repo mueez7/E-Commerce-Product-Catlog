@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShopLine — Shop</title>
+    <link rel="stylesheet" href="Css/shop.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-logo">ShopLine</div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contactus.html">ContactUs</a>
+      </nav>
+
+      <div class="header-controls">
+        <div class="search">
+          <input id="globalSearch" type="search" placeholder="Search products" />
+        </div>
+        <button class="icon-btn" title="Cart" aria-label="Cart" onclick="location.href='cart.html'"><i class="fa-solid fa-cart-arrow-down"></i></button>
+        <button class="icon-btn" title="Account" aria-label="Account"><i class="fa-solid fa-user"></i></button>
+      </div>
+    </div>
+  </header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <h1>Premium Products, Clean Experience.</h1>
+      <p class="hero-sub">Electronics, laptops, fragrances & more — curated for you.</p>
+    </div>
+    <div class="hero-media"></div>
+  </div>
+</section>
+
+<main class="container">
+  <div class="filters-box">
+    <div class="filter-row">
+
+      <div class="filter-group">
+        <label>Search</label>
+        <input id="searchInput" placeholder="Search products" />
+      </div>
+
+      <div class="filter-group">
+        <label>Category</label>
+        <select id="categorySelect"><option value="">All Categories</option></select>
+      </div>
+
+      <div class="filter-group">
+        <label>Min Price</label>
+        <input id="minPrice" type="number" placeholder="0" />
+      </div>
+
+      <div class="filter-group">
+        <label>Max Price</label>
+        <input id="maxPrice" type="number" placeholder="9999" />
+      </div>
+
+      <div class="filter-group">
+        <label>&nbsp;</label>
+        <div style="display:flex;gap:10px;">
+          <button id="resetBtn" class="btn-reset">Reset</button>
+          <button id="applyBtn" class="btn-apply">Apply</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section id="productsGrid" class="products-grid"></section>
+  <div id="emptyState" class="empty-state" hidden>No products found.</div>
+</main>
+<!-- Toast Notification -->
+<div id="toast" class="toast">Added to cart</div>
+
+<script src="cart.js"></script>
+<script src="Js/shop.js"></script>
+
+
+</body>
+</html>

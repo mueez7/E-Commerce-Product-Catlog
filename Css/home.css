@@ -1,0 +1,431 @@
+
+
+    :root{
+      --max-w:1100px;
+      --accent:#000;
+      --muted:#6b7280;
+      --soft:#f5f5f7;
+      --card:#ffffff;
+      --radius:18px;
+      --shadow: 0 12px 30px rgba(8,10,20,0.06);
+      --gap:22px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: #fcfcfc;
+      color:#071124;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    .container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+
+    /* ---------- HEADER ---------- */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:60;
+      background:rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid rgba(10,10,20,0.04);
+      backdrop-filter: blur(3px);
+      
+      
+      
+      
+      margin: auto;
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 0;
+      justify-content: space-around;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .brand-logo{
+      font-family: Kaushan Script;
+      font-size:20px;
+      color:var(--accent);
+      letter-spacing:0.6px;
+    }
+
+    .nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+
+    .nav a{
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600;
+      font-size:15px;
+      padding:6px 8px;
+    }
+
+    .nav a.active{
+      color:var(--accent);
+      font-weight:700;
+    }
+
+    .header-controls{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    .search {
+      position:relative;
+    }
+
+    .search input{
+      width:380px;
+      max-width:38vw;
+      padding:10px 16px;
+      border-radius:26px;
+      border:1px solid #e8eaed;
+      background:#f7f8fa;
+      outline:none;
+    }
+
+    .icon-btn{
+      background:transparent;
+      border:0;
+      font-size:19px;
+      padding:8px;
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero{
+      padding:28px 0 14px;
+    }
+
+    .hero-inner{
+      display:grid;
+      
+      gap:28px;
+      align-items:center;
+    }
+
+    .hero-card{
+      background-image: url('/assets/white\ head\ phone.png');
+      background-position: center;
+      background-size: cover;
+      /* background:#fff; */
+      border-radius:22px;
+      padding:42px 36px;
+      box-shadow:var(--shadow);
+      min-height:360px;
+      position:relative;
+      overflow:visible;
+    }
+
+    .hero-card h1{
+      margin:0 0 14px 0;
+      font-size:40px;
+      font-weight:800;
+      letter-spacing:-1px;
+      color:#071124;
+    }
+
+    .hero-card p.lead{
+      margin:0 0 22px 0;
+      color:var(--muted);
+      max-width:50ch;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      margin-top:18px;
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:#fff;
+      border:0;
+      padding:10px 18px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .btn-ghost{
+      background:transparent;
+      border:1px solid #e6e8eb;
+      padding:10px 18px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+      color:#111;
+    }
+
+    
+
+
+    /* dots below hero */
+    .hero-dots{display:flex;gap:8px;align-items:center;margin-top:12px}
+    .dot{width:8px;height:8px;border-radius:50%;background:#d7d7d7}
+    .dot.active{background:#111}
+
+    /* ---------- FEATURES ROW ---------- */
+    .features{
+      display:flex;
+      gap:18px;
+      margin:28px 0;
+      align-items:stretch;
+    }
+
+    .feature{
+      background:#fff;
+      flex:1;
+      border-radius:14px;
+      padding:18px;
+      box-shadow:var(--shadow);
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    .feature-icon{
+      width:48px;height:48px;border-radius:10px;background:#f2f6fb;display:grid;
+      place-items:center;color:#111;font-size:20px;
+    }
+    .feature h4{margin:0;font-size:15px}
+    .feature p{margin:0;color:var(--muted);font-size:13px}
+
+    /* ---------- PROMO CARDS ---------- */
+    .promos{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin:18px 0 30px;
+    }
+
+    .promo{
+      background:#fff;border-radius:14px;padding:20px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:center;
+      height:300px;
+    }
+
+    .promo img{width:250px;height:auto;object-fit:contain;border-radius:10px}
+
+    .promo h3{margin:0;font-size:16px}
+    .promo p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+    /* ---------- PRODUCT GRID (recommended) ---------- */
+    .section-title{
+      display:flex;justify-content:space-between;align-items:center;margin:18px 0 6px;
+    }
+    .section-title h2{margin:0;font-size:18px;font-weight:800}
+    .section-title button{background:transparent;border:1px solid #eee;padding:8px 12px;border-radius:10px;cursor:pointer}
+
+    .product-grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:18px;
+      margin-bottom:28px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      padding:14px;
+      box-shadow: 0 8px 20px rgba(10,12,20,0.06);
+      display:flex;
+      flex-direction:column;
+      height:320px;
+    }
+
+    .card .img-wrap{
+      height:160px;
+      border-radius:12px;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      margin-bottom:12px;
+    }
+
+    .card img{width:100%;height:100%;object-fit:contain}
+
+    .card .name{font-weight:700;font-size:15px;height:44px;overflow:hidden;margin-bottom:6px}
+    .card .meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;margin-bottom:10px}
+    .card .price{font-weight:800}
+
+    .card .actions{margin-top:auto;display:flex;gap:10px}
+    .card .add{flex:1;background:#f3f4f6;border-radius:999px;padding:10px;border:0;cursor:pointer;font-weight:700}
+    .card .buy{flex:1;background:#111;color:#fff;border-radius:999px;padding:10px;border:0;cursor:pointer;font-weight:700}
+
+    /* ---------- CATEGORY COLLAGE ---------- */
+    .collage{
+      margin:14px 0;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      
+    }
+
+    .collage .big{
+      grid-column:1/4;
+      border-radius:14px;overflow:hidden;height:120px;background:#ddd;
+    }
+
+    .collage {
+      display:grid;grid-template-columns:repeat(3,1fr);margin-top:12px;
+    }
+
+    .collage {height:120px;border-radius:12px;background:#eee;overflow:hidden;object-fit:cover}
+
+    /* ---------- SECOND PRODUCT ROW ---------- */
+    .product-grid.small-cards{grid-template-columns: repeat(5, 1fr); gap:14px}
+    .small-card{height:200px;padding:12px}
+
+    /* ---------- NEWSLETTER BANNER ---------- */
+    .newsletter{
+      background:#111;color:#fff;border-radius:14px;padding:34px;margin:26px 0;display:flex;align-items:center;justify-content:space-between;gap:18px;
+    }
+    .newsletter input{padding:12px;border-radius:999px;border:0;min-width:320px}
+
+    /* ---------- FOOTER ---------- */
+    .site-footer{
+      background:#fff;padding:36px 0 80px;border-top:1px solid #eee;margin-top:36px;
+    }
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .footer-inner .brand{font-weight:800}
+    .socials{display:flex;gap:10px}
+
+    /* responsive tweaks */
+    @media (max-width:1100px){
+      .hero-inner{grid-template-columns:1fr 320px}
+      .product-grid{grid-template-columns:repeat(3,1fr)}
+      .product-grid.small-cards{grid-template-columns:repeat(3,1fr)}
+      .collage{grid-template-columns:1fr}
+      .collage .big{grid-column:1/1}
+      .collage .small-grid{grid-template-columns:repeat(3,1fr)}
+    }
+
+    @media (max-width:760px){
+      .search input{width:180px}
+      .hero-inner{grid-template-columns:1fr}
+      .hero-media{height:260px}
+      .product-grid{grid-template-columns:repeat(2,1fr)}
+      .product-grid.small-cards{grid-template-columns:repeat(2,1fr)}
+      .features{flex-direction:column}
+      .promos{grid-template-columns:1fr}
+      .collage .small-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width:420px){
+      .search input{display:none}
+      .product-grid{grid-template-columns:1fr}
+    }
+    
+
+    .box1{
+      display: flex;
+      
+      
+    }
+
+    .cl1{
+      background-color: rgb(0, 0, 0);
+      width: 35%;
+      height: 150px;
+      border-radius: 12px;
+      margin:12px;
+      background-image: url('/assets/laptops.jpg');
+      background-position: center;
+      background-size:cover ;
+    }
+
+    .cl2{
+      background-color: rgb(78, 78, 78);
+      width: 45%;
+      height: 150px;
+      border-radius: 12px;
+      margin:12px;
+      background-image: url('/assets/products.jpg');
+      background-position: center;
+      background-size:cover ;
+    }
+    .cl3{
+      background-color: rgb(187, 187, 187);
+      width: 100%;
+      height: 150px;
+      border-radius: 12px;
+      margin:12px;
+      background-image: url('/assets/davide-boscolo-gz9njd0zYbQ-unsplash.jpg');
+      background-position: center;
+      background-size:cover ;
+    }
+
+    .cl4{
+      background-color: rgb(0, 0, 0);
+      width: 100%;
+      height: 150px;
+      border-radius: 12px;
+      margin:12px;
+      background-image: url('/assets/iteams.jpg');
+      background-position: center;
+      background-size:cover ;
+    }
+
+    .cl5{
+      background-color: rgb(78, 78, 78);
+      width: 90%;
+      height: 150px;
+      border-radius: 12px;
+      margin:12px;
+      background-image: url('/assets/shoe.jpg');
+      background-position: center;
+      background-size:cover ;
+    }
+    .cl6{
+      background-color: rgb(187, 187, 187);
+      width: 50%;
+      height: 150px;
+      border-radius: 12px;
+      margin:12px;
+      background-image: url('/assets/perfume.jpg');
+      background-position: center;
+      background-size:300px;
+    }
+
+
+    .toast {
+    position: fixed;
+    right: 25px;
+    bottom: -60px; /* Hidden initially */
+    background: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Visible state */
+.toast.show {
+    bottom: 25px;
+    opacity: 1;
+}

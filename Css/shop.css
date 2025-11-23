@@ -1,0 +1,177 @@
+:root{
+  --container:1100px;
+  --accent:#000; /* black */
+  --muted:#6b7280;
+  --bg:#fcfcfc;
+  --card:#f8f8f8;
+  --radius:14px;
+  --shadow:0 8px 30px rgba(0,0,0,0.06);
+  --gap:22px;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:#000;-webkit-font-smoothing:antialiased}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+
+.site-header{
+      position:sticky;
+      top:0;
+      z-index:60;
+      background:rgba(255,255,255,0.95);
+      border-bottom: 1px solid rgba(10,10,20,0.04);
+      
+      backdrop-filter: blur(3px);
+      
+      
+      
+      
+      margin: auto;
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 0;
+      justify-content: space-around;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .brand-logo{
+      font-family: Kaushan Script;
+      font-size:20px;
+      color:var(--accent);
+      letter-spacing:0.6px;
+    }
+
+    .nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+
+    .nav a{
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600;
+      font-size:15px;
+      padding:6px 8px;
+    }
+
+    .nav a.active{
+      color:var(--accent);
+      font-weight:700;
+    }
+
+    .header-controls{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    .search {
+      position:relative;
+    }
+
+    .search input{
+      width:380px;
+      max-width:38vw;
+      padding:10px 16px;
+      border-radius:26px;
+      border:1px solid #e8eaed;
+      background:#f7f8fa;
+      outline:none;
+    }
+
+    .icon-btn{
+      background:transparent;
+      border:0;
+      font-size:19px;
+      padding:8px;
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+/* HERO */
+.hero{padding:40px 0 20px}
+.hero-inner{display:flex;align-items:center;gap:40px}
+.hero-copy h1{font-size:36px;font-weight:800;margin-bottom:8px}
+.hero-sub{color:#555}
+.hero-media{width:420px;height:220px;border-radius:16px;background-image: url('/assets/perfume.jpg');background-position: center;background-size: cover;box-shadow:var(--shadow)}
+
+/* FILTERS */
+.filters-box{background:#fff;padding:20px;border-radius:16px;box-shadow:var(--shadow);margin-bottom:20px}
+.filter-row{display:flex;gap:20px;flex-wrap:wrap}
+.filter-group{flex:1;min-width:180px;display:flex;flex-direction:column}
+.filter-group input,select{padding:10px;border-radius:10px;border:1px solid #ccc;font-size:14px}
+
+.btn-reset{padding:10px 14px;border-radius:10px;border:1px solid #ddd;background:#fff;cursor:pointer}
+.btn-apply{padding:10px 14px;border-radius:10px;border:none;background:#000;color:#fff;cursor:pointer}
+
+/* PRODUCTS */
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:var(--gap);
+  margin-top:12px;
+}
+
+.product-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:16px;
+  height:380px;
+  display:flex;
+  flex-direction:column;
+  box-shadow:var(--shadow);
+}
+
+.product-img{height:200px;width:100%;object-fit:contain;background:#fff;border-radius:10px;margin-bottom:10px}
+
+.product-info{display:flex;flex-direction:column;justify-content:space-between;flex:1}
+.product-title{font-size:16px;font-weight:700;margin-bottom:6px;height:40px;overflow:hidden}
+
+.product-meta{display:flex;justify-content:space-between;margin-bottom:10px;font-size:14px}
+.product-price{font-weight:800}
+
+.product-buttons{display:flex;gap:10px;margin-top:auto}
+.add-cart-btn,.buy-btn{flex:1;padding:10px;border-radius:50px;border:none;font-weight:700;cursor:pointer;font-size:14px}
+.add-cart-btn{background:#eaeaea;color:#000}
+.buy-btn{background:#000;color:#fff}
+
+.empty-state{text-align:center;padding:30px;color:#777;font-size:18px}
+
+/* RESPONSIVE */
+@media(max-width:1100px){.products-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:820px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.products-grid{grid-template-columns:1fr}.filter-row{flex-direction:column}}
+
+.toast {
+    position: fixed;
+    right: 25px;
+    bottom: -60px; /* Hidden initially */
+    background: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Visible state */
+.toast.show {
+    bottom: 25px;
+    opacity: 1;
+}

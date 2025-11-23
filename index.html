@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShopLine — Home</title>
+    <link rel="stylesheet" href="/Css/home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-logo">ShopLine</div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contactus.html">ContactUs</a>
+      </nav>
+
+      <div class="header-controls">
+        <div class="search">
+          <input id="globalSearch" type="search" placeholder="Search products" />
+        </div>
+        <button class="icon-btn" title="Cart" aria-label="Cart" onclick="location.href='cart.html'"><i class="fa-solid fa-cart-arrow-down"></i></button>
+        <button class="icon-btn" title="Account" aria-label="Account"><i class="fa-solid fa-user"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-card">
+          <h1>Everything you need. <br>In one place.</h1>
+          <p class="lead">A modern store built for everything you love. Shop the latest products effortlessly. Quality convenience and great prices await.</p>
+
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="navigateToShop()">Shop now</button>
+            <button class="btn-ghost" onclick="navigateToShop()">Deals</button>
+          </div>
+
+          <div class="hero-dots" style="margin-top:20px">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- features -->
+    <section class="features">
+      <div class="feature">
+        <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <div>
+          <h4>Free Shipping</h4>
+          <p>Enjoy free shipping on every order, no minimum, no hassle.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon"><i class="fa-solid fa-alarm-clock"></i></div>
+        <div>
+          <h4>24/7 Support</h4>
+          <p>We're here for you 24/7 — any question, any time.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+        <div>
+          <h4>Money Return</h4>
+          <p>Hassle-free returns — your money back, guaranteed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- promos -->
+    <section class="promos">
+      <div class="promo">
+        <img src="assets/Swift-Go-14-AI-01.jpg" alt="">
+        <div>
+          <h3>The Most Powerful Laptops</h3>
+          <p>Save upto 25% — latest models at unbeatable prices.</p>
+          <div style="margin-top:10px"><button class="btn-primary" onclick="navigateToShop()">Buy Now</button></div>
+        </div>
+      </div>
+
+      <div class="promo">
+        <img src="assets/MCIM03386070_Charcoal_Echo_HiRes.png" alt="">
+        <div>
+          <h3>Control Your Smart Home</h3>
+          <p>Available in 5 bold colors — smart devices for smarter living.</p>
+          <div style="margin-top:10px"><button class="btn-primary" onclick="navigateToShop()">Buy Now</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- highly recommended row -->
+    <div class="section-title">
+      <h2>Highly Recommended</h2>
+      <button onclick="navigateToShop()">View All</button>
+    </div>
+
+    <section id="recommended" class="product-grid" aria-live="polite">
+      <!-- JS injects cards here -->
+    </section>
+
+    <!-- collage -->
+    <section class="collage">
+      <div class="big" style="background-image:url('/assets/christopher-gower-_aXa21cf7rY-unsplash.jpg'); background-size:cover;background-position:center;">
+        <div style="padding:18px;color:#fff;background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0));height:100%;display:flex;align-items:flex-end">
+          <div>
+            <h3 style="margin:0;font-size:22px">Explore The Various Collection Of ShopLine</h3>
+            <p style="color:rgba(255,255,255,0.85);margin-top:6px">View Products</p>
+          </div>
+        </div>
+      </div>
+ </section>
+      <div class="box1">
+        <div class="box cl1 "></div>
+        <div class="box cl2 "></div>
+        <div class="box cl3 "></div>
+      </div>
+      <div class="box1">
+        <div class="box cl4 "></div>
+        <div class="box cl5 "></div>
+        <div class="box cl6 "></div>
+      </div>
+    
+
+    <!-- best selling -->
+    <div class="section-title" style="margin-top:26px">
+      <h2>Best Selling Products</h2>
+      <button onclick="navigateToShop()">View All</button>
+    </div>
+
+    <section id="best-selling" class="product-grid small-cards">
+      <!-- JS injects cards here -->
+    </section>
+
+    <!-- newsletter -->
+    <section class="newsletter">
+      <div>
+        <h3 style="margin:0 0 6px">Stay updated with the latest collections</h3>
+        <p style="margin:0;color:rgba(255,255,255,0.85)">Subscribe to get updates on new collections, seasonal sales, and exclusive product drops.</p>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <input id="newsletterEmail" placeholder="Your email">
+        <button class="btn-primary" onclick="subscribe()">Send</button>
+      </div>
+    </section>
+<div id="toast" class="toast">Added to cart</div>
+  </main>
+
+ 
+
+<script src="/Js/home.js"></script>
+</body>
+</html>
