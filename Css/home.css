@@ -429,3 +429,79 @@
     bottom: 25px;
     opacity: 1;
 }
+
+footer{
+    color: #fff;
+    background: url("footer-bg.png") no-repeat center;
+    padding: 40px 0;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0 0.7);
+    margin: 20px;
+}
+
+.logo{
+    font-family: Kaushan script, cursive;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.divider{
+    width: 90%;
+    margin: 10px auto 20px;
+    opacity: 0.6;
+
+}
+.container{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul{
+    margin-bottom: 32px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+}
+
+ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+li{
+    padding: 0px 15px;
+    margin-bottom: 16px;
+}
+
+a{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+i{
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.policies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #565656;
+    background-color: rgb(109, 109, 109);
+    padding: 40px 0;
+    margin: 20px;
+    height: 250px;
+}
