@@ -251,6 +251,11 @@
       flex-direction:column;
       height:320px;
     }
+    .card:hover{
+      box-shadow: 0 12px 30px rgba(8,10,20,0.1);
+      transform: translateY(-4px);
+      transition: all 0.3s ease;
+    }
 
     .card .img-wrap{
       height:160px;
